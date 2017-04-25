@@ -23,7 +23,8 @@
 <!-- 6. Please set hadoop environment accordingly. -->
 <!-- 7. Please set ldap info for login the system. -->
 <!-- 8. Please config remote-server if you have many cat servers. -->
-<!-- 
+
+<!--
 <config local-mode="false" hdfs-machine="false" job-machine="false" alert-machine="false">
 	<storage  local-base-dir="/data/appdatas/cat/bucket/" max-hdfs-storage-time="15" local-report-storage-time="7" local-logivew-storage-time="7">
 		<hdfs id="logview" max-size="128M" server-uri="hdfs://10.1.77.86/user/cat" base-dir="logview"/>
@@ -32,9 +33,9 @@
 	</storage>
 
 	<console default-domain="Cat" show-cat-domain="true">
-		<remote-servers>192.168.0.1:2281,192.168.0.2:2281</remote-servers>		
+		<remote-servers>192.168.0.1:2281,192.168.0.2:2281</remote-servers>
 	</console>
-	
+
 	<ldap ldapUrl="ldap://192.168.50.11:389/DC=dianpingoa,DC=com"/>
 </config>
 
