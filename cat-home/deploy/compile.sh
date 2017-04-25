@@ -1,1 +1,1 @@
-mvn clean -U package -Denv_config=$ENV  -Dmaven.test.skip=true
+mvn clean -U package -Dmaven.test.skip=true
