@@ -9,7 +9,7 @@ tar -xvf  apache-maven-3.2.5-bin.tar.gz
 export M2_HOME="/usr/local/maven/apache-maven-3.2.5"
 if ! grep "M2_HOME=/usr/local/maven/apache-maven-3.2.5" /etc/environment 
 then
-  echo "M2_HOME=/usr/local/maven/apache-maven-3.2.5" |tee -a /etc/environment 
+  echo "M2_HOME=/usr/local/maven/apache-maven-3.2.5" |tee -a /etc/environment
   echo "PATH=$PATH:$M2_HOME/bin" | tee -a /etc/environment 
 fi
 
