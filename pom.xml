@@ -124,6 +124,11 @@
 				<artifactId>log4j</artifactId>
 				<version>1.2.14</version>
 			</dependency>
+			<dependency>
+				<groupId>com.sankuai.mms</groupId>
+				<artifactId>mms-boot</artifactId>
+				<version>1.0.3</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<build>

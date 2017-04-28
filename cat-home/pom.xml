@@ -90,6 +90,10 @@
          <artifactId>javaparser</artifactId>
          <version>1.0.8</version>
       </dependency>
+      <dependency>
+         <groupId>com.sankuai.mms</groupId>
+         <artifactId>mms-boot</artifactId>
+      </dependency>
    </dependencies>
    <build>
       <resources>
