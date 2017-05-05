@@ -1,23 +1,22 @@
 package com.dianping.cat.configuration;
 
-import java.io.File;
-import java.io.InputStream;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-
+import com.dianping.cat.Cat;
+import com.dianping.cat.configuration.client.entity.ClientConfig;
+import com.dianping.cat.configuration.client.entity.Domain;
+import com.dianping.cat.configuration.client.entity.Server;
+import com.dianping.cat.configuration.client.transform.DefaultSaxParser;
 import org.codehaus.plexus.logging.LogEnabled;
 import org.codehaus.plexus.logging.Logger;
 import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
 import org.codehaus.plexus.personality.plexus.lifecycle.phase.InitializationException;
 import org.unidal.helper.Files;
 
-import com.dianping.cat.Cat;
-import com.dianping.cat.configuration.client.entity.ClientConfig;
-import com.dianping.cat.configuration.client.entity.Domain;
-import com.dianping.cat.configuration.client.entity.Server;
-import com.dianping.cat.configuration.client.transform.DefaultSaxParser;
+import java.io.File;
+import java.io.InputStream;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 
 public class DefaultClientConfigManager implements LogEnabled, ClientConfigManager, Initializable {
 	private static final String CAT_CLIENT_XML = "/META-INF/maoyanmonitor/client.xml";
