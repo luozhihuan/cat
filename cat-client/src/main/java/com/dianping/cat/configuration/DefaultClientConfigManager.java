@@ -20,11 +20,11 @@ import com.dianping.cat.configuration.client.entity.Server;
 import com.dianping.cat.configuration.client.transform.DefaultSaxParser;
 
 public class DefaultClientConfigManager implements LogEnabled, ClientConfigManager, Initializable {
-	private static final String CAT_CLIENT_XML = "/META-INF/cat/client.xml";
+	private static final String CAT_CLIENT_XML = "/META-INF/maoyanmonitor/client.xml";
 
 	private static final String PROPERTIES_CLIENT_XML = "/META-INF/app.properties";
 	
-	private static final String XML = "/data/appdatas/cat/client.xml";
+	private static final String XML = "/data/appdatas/maoyanmonitor/client.xml";
 
 	private Logger m_logger;
 

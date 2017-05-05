@@ -1,13 +1,11 @@
 package com.dianping.cat;
 
-import java.io.File;
-
-import junit.framework.Assert;
-
-import org.junit.Test;
-
 import com.dianping.cat.message.MessageProducer;
 import com.dianping.cat.message.Transaction;
+import junit.framework.Assert;
+import org.junit.Test;
+
+import java.io.File;
 
 public class CatEnvironmentTest {
 	@Test
@@ -26,7 +24,7 @@ public class CatEnvironmentTest {
 
 	@Test
 	public void testWithInitialize() throws InterruptedException {
-		Cat.initialize(new File("/data/appdatas/cat/client.xml"));
+		Cat.initialize(new File("/data/appdatas/maoyanmonitor/client.xml"));
 		MessageProducer cat = Cat.getProducer();
 		Transaction t = cat.newTransaction("TestType", "TestName");
 

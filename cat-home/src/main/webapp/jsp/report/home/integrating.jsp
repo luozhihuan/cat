@@ -45,7 +45,7 @@
    <dd><p class="detailContent">在resources资源文件META-INF下，注意是<span class="text-danger">src/main/resources/META-INF/</span>文件夹，
   而不是<span class="text-danger">webapps下的那个META-INF</span>,添加<span class="text-danger">app.properties</span>，加上domain配置，如：<span class="text-danger">app.name=tuangou-web</span></p>
   <p class="text-danger"> B) 在资源文件中新建client.xml文件</p>
-  <dd><p class="detailContent">在resources资源文件META-INF下，新建cat文件夹，注意是<span class="text-danger">src/main/resources/META-INF/cat/client.xml</span>文件，
+  <dd><p class="detailContent">在resources资源文件META-INF下，新建cat文件夹，注意是<span class="text-danger">src/main/resources/META-INF/maoyanmonitor/client.xml</span>文件，
   而不是<span class="text-danger">webapps下的那个META-INF</span>,domain id表示项目名称<span class="text-danger">此处为CMDB申请的名字，比如</span></p>
   <xmp class="well">
      <config mode="client">
@@ -58,7 +58,7 @@
   <p class="detailContent">如果系统是windows环境，则在eclipse运行的盘，比如D盘，新建/data/appdatas/cat/目录，新建client.xml文件</p>
 	
   <p>项目文件中srouce中的client.xml,此文件代表了这个项目我是谁,比如项目的名字Cat。</p>
-  <p>/data/appdatas/cat/client.xml,此文件有OP控制,这里的Domain名字用来做开关，如果一台机器上部署了多个应用，可以指定把一个应用的监控关闭。</p>
+  <p>/data/appdatas/maoyanmonitor/client.xml,此文件有OP控制,这里的Domain名字用来做开关，如果一台机器上部署了多个应用，可以指定把一个应用的监控关闭。</p>
   
   <xmp class="well">
       <config mode="client">

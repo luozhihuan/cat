@@ -1,19 +1,5 @@
 package com.dianping.cat.message.internal;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Queue;
-
-import junit.framework.Assert;
-
-import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
-import org.unidal.helper.Files;
-import org.unidal.helper.Reflects;
-
 import com.dianping.cat.Cat;
 import com.dianping.cat.configuration.client.entity.ClientConfig;
 import com.dianping.cat.configuration.client.entity.Domain;
@@ -23,6 +9,18 @@ import com.dianping.cat.message.MessageProducer;
 import com.dianping.cat.message.Transaction;
 import com.dianping.cat.message.io.TransportManager;
 import com.dianping.cat.message.spi.MessageTree;
+import junit.framework.Assert;
+import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+import org.unidal.helper.Files;
+import org.unidal.helper.Reflects;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Queue;
 
 @RunWith(JUnit4.class)
 public class CatClientTest extends CatTestCase {
@@ -35,7 +33,7 @@ public class CatClientTest extends CatTestCase {
 		clientConfig.setMode("client");
 		clientConfig.addDomain(new Domain("Test").setEnabled(true));
 
-		File configFile = new File("/data/appdatas/cat/client.xml").getCanonicalFile();
+		File configFile = new File("/data/appdatas/maoyanmonitor/client.xml").getCanonicalFile();
 
 		configFile.getParentFile().mkdirs();
 

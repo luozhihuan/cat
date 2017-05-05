@@ -8,7 +8,7 @@
 拷贝client.xml、server.xml、datasources.xml文件到/data/appdatas/cat/目录中
    Cat服务端配置
    A、   客户端配置
-   打开/data/appdatas/cat/client.xml客户端配置文件
+   打开/data/appdatas/maoyanmonitor/client.xml客户端配置文件
    <?xml version="1.0" encoding="utf-8"?>
  
    <config mode="client" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="config.xsd">
@@ -131,7 +131,7 @@ C、修改Ping告警配置
 2.  配置客户端文件，拷贝client.xml文件
    A、Linux\Mac 到/data/appdatas/cat下
    B、Windows 到系统运行盘的根目录/data/appdatas/cat下
-   打开/data/appdatas/cat/client.xml客户端配置文件
+   打开/data/appdatas/maoyanmonitor/client.xml客户端配置文件
    <?xml version="1.0" encoding="utf-8"?>
     <config mode="client" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="config.xsd">
       <servers>
