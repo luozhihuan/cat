@@ -6,9 +6,10 @@
 		<artifactId>parent</artifactId>
 		<version>1.4.0</version>
 	</parent>
+	<version>1.4.0-SNAPSHOT</version>
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>cat-client</artifactId>
-	<name>cat-client</name>
+	<artifactId>maoyan-monitor</artifactId>
+	<name>maoyan-monitor</name>
 	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>
@@ -40,6 +41,23 @@
 			<artifactId>gson</artifactId>
 		</dependency>
 	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus-3rd</id>
+			<url>
+				http://maven.sankuai.com/nexus/content/repositories/thirdparty/
+			</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots-3rd</id>
+			<url>
+				http://maven.sankuai.com/nexus/content/repositories/3rdPartySnapshot/
+			</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+
 	<build>
 		<plugins>
 			<plugin>

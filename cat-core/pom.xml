@@ -12,15 +12,27 @@
    <dependencies>
       <dependency>
          <groupId>com.dianping.cat</groupId>
-         <artifactId>cat-client</artifactId>
+         <artifactId>maoyan-monitor</artifactId>
       </dependency>
       <dependency>
          <groupId>org.unidal.framework</groupId>
          <artifactId>web-framework</artifactId>
+         <exclusions>
+            <exclusion>
+               <artifactId>cat-client</artifactId>
+               <groupId>com.dianping.cat</groupId>
+            </exclusion>
+         </exclusions>
       </dependency>
       <dependency>
          <groupId>org.unidal.framework</groupId>
          <artifactId>dal-jdbc</artifactId>
+         <exclusions>
+            <exclusion>
+               <artifactId>cat-client</artifactId>
+               <groupId>com.dianping.cat</groupId>
+            </exclusion>
+         </exclusions>
       </dependency>
       <dependency>
          <groupId>javax.servlet</groupId>
