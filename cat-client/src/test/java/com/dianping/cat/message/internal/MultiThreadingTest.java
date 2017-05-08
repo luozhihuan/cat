@@ -1,17 +1,16 @@
 package com.dianping.cat.message.internal;
 
-import java.io.File;
-import java.util.concurrent.TimeUnit;
-
+import com.dianping.cat.Cat;
+import com.dianping.cat.message.ForkedTransaction;
+import com.dianping.cat.message.Message;
+import com.dianping.cat.message.Transaction;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.unidal.helper.Threads;
 
-import com.dianping.cat.Cat;
-import com.dianping.cat.message.ForkedTransaction;
-import com.dianping.cat.message.Message;
-import com.dianping.cat.message.Transaction;
+import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 public class MultiThreadingTest {
 	@After
@@ -20,7 +19,7 @@ public class MultiThreadingTest {
 
 	@Before
 	public void before() {
-		Cat.initialize(new File("/data/appdatas/cat/client.xml"));
+		Cat.initialize(new File("/data/appdatas/maoyanmonitor/client.xml"));
 	}
 
 	@Test

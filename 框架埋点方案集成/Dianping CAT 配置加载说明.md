@@ -20,7 +20,7 @@ __CAT__监控系统由多个组件组成
 
 cat-home.war 有三个外部配置文件,分别是：
 
-* /data/appdatas/cat/client.xml，
+* /data/appdatas/maoyanmonitor/client.xml，
    
  * 配置连接（其它）服务端的信息,如IP地址、tcp端口、http端口
 
@@ -41,7 +41,7 @@ cat-home.war 有三个外部配置文件,分别是：
 * cat-home.war!/WEB-INF/classes/META-INF/app.properties
  * 首选的应用特征信息配置文件，默认内容为：app.name=cat
 
-* cat-home.war!/WEB-INF/classes/META-INF/cat/client.xml
+* cat-home.war!/WEB-INF/classes/META-INF/maoyanmonitor/client.xml
  * 次选的应用特征信息配置文件
 
 * cat-home.war!/WEB-INF/classes/META-INF/plexus/components.xml

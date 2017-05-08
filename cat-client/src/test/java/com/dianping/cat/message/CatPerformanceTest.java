@@ -1,12 +1,6 @@
 package com.dianping.cat.message;
 
-import static com.dianping.cat.message.Message.SUCCESS;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.locks.LockSupport;
-
+import com.dianping.cat.Cat;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -14,7 +8,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import com.dianping.cat.Cat;
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.locks.LockSupport;
+
+import static com.dianping.cat.message.Message.SUCCESS;
 
 @RunWith(JUnit4.class)
 public class CatPerformanceTest {
@@ -92,7 +91,7 @@ public class CatPerformanceTest {
 	@Test
 	@Ignore
 	public void justloop() throws InterruptedException {
-		Cat.initialize(new File("/data/appdatas/cat/client.xml"));
+		Cat.initialize(new File("/data/appdatas/maoyanmonitor/client.xml"));
 
 		new Thread(new Runnable() {
 
@@ -129,7 +128,7 @@ public class CatPerformanceTest {
 	@Test
 	@Ignore
 	public void justloop2() throws InterruptedException {
-		Cat.initialize(new File("/data/appdatas/cat/client.xml"));
+		Cat.initialize(new File("/data/appdatas/maoyanmonitor/client.xml"));
 
 		new Thread(new Runnable() {
 
@@ -158,7 +157,7 @@ public class CatPerformanceTest {
 	@Ignore
 	@Test
 	public void test() throws InterruptedException {
-		Cat.initialize(new File("/data/appdatas/cat/client.xml"));
+		Cat.initialize(new File("/data/appdatas/maoyanmonitor/client.xml"));
 		long time = System.currentTimeMillis();
 		for (int i = 0; i < count; i++) {
 			creatOneTransaction();
@@ -172,7 +171,7 @@ public class CatPerformanceTest {
 	@Test
 	@Ignore
 	public void testManyThread() throws IOException, InterruptedException {
-		Cat.initialize(new File("/data/appdatas/cat/client.xml"));
+		Cat.initialize(new File("/data/appdatas/maoyanmonitor/client.xml"));
 		System.out.println("press any key to continue...");
 		System.in.read();
 

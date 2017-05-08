@@ -20,8 +20,8 @@
 		<dependencies>
 			<dependency>
 				<groupId>com.dianping.cat</groupId>
-				<artifactId>cat-client</artifactId>
-				<version>${project.version}</version>
+				<artifactId>maoyan-monitor</artifactId>
+				<version>1.4.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>com.dianping.cat</groupId>
@@ -123,6 +123,11 @@
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
 				<version>1.2.14</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sankuai.mms</groupId>
+				<artifactId>mms-boot</artifactId>
+				<version>1.0.3</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
