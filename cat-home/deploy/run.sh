@@ -17,7 +17,10 @@ function monitorinit(){
     if [ -z "$MONITOR_PATH" ]; then
         MONITOR_PATH="/data/appdatas/maoyanmonitor"
     fi
-    mkdir MONITOR_PATH
+    if [ ! -d "$MONITOR_PATH" ]; then
+        mkdir MONITOR_PATH
+    fi
+
 }
 
 function init() {
