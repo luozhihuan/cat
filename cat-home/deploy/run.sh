@@ -12,6 +12,13 @@ JVM_SIZE="-Xmx4g -Xms4g"
 # do not edit
 # ------------------------------------
 
+function monitorinit(){
+    echo "maoyan monitor init start"
+    if [ -z "$MONITOR_PATH" ]; then
+        MONITOR_PATH="/data/appdatas/maoyanmonitor"
+    fi
+    mkdir MONITOR_PATH
+}
 
 function init() {
 #    判断变量LOG_PATH变量是否为空，为空返回真，则执行对LOG_PATH的赋值
@@ -85,5 +92,6 @@ function run() {
 # ------------------------------------
 # actually work
 # ------------------------------------
+monitorinit
 init
 run
