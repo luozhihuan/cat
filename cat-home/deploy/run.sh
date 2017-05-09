@@ -22,6 +22,8 @@ function monitorinit(){
         echo "创建目录"$MONITOR_PATH
 	    mkdir $MONITOR_PATH
     fi
+    clientxml="$MONITOR_PATH/client.xml"
+    cat deploy/client.xml > $clientxml
 }
 
 function init() {
