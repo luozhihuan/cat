@@ -23,9 +23,9 @@ function monitorinit(){
     clientxml="$MONITOR_PATH/client.xml"
     datasourcesxml="/data/appdatas/datasources.xml"
     serverxml="/data/appdatas/server.xml"
-    cat deploy/client.xml > $clientxml
-    cat deploy/datasources.xml > $datasourcesxml
-    cat deploy/server.xml > $serverxml
+    cat online/client.xml > $clientxml
+    cat online/datasources.xml > $datasourcesxml
+    cat online/server.xml > $serverxml
 }
 
 function init() {
