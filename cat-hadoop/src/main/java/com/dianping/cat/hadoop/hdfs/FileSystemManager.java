@@ -1,10 +1,7 @@
 package com.dianping.cat.hadoop.hdfs;
 
-import java.io.IOException;
-import java.net.URI;
-import java.util.HashMap;
-import java.util.Map;
-
+import com.dianping.cat.Cat;
+import com.dianping.cat.config.server.ServerConfigManager;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.security.SecurityUtil;
@@ -13,8 +10,10 @@ import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
 import org.codehaus.plexus.personality.plexus.lifecycle.phase.InitializationException;
 import org.unidal.lookup.annotation.Inject;
 
-import com.dianping.cat.Cat;
-import com.dianping.cat.config.server.ServerConfigManager;
+import java.io.IOException;
+import java.net.URI;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FileSystemManager implements Initializable {
 	@Inject
@@ -67,7 +66,7 @@ public class FileSystemManager implements Initializable {
 	}
 
 	// prepare file /etc/krb5.conf
-	// prepare file /data/appdatas/cat/cat.keytab
+	// prepare file /data/appdatas/maoyanmonitor/cat.keytab
 	// prepare mapping [host] => [ip] at /etc/hosts
 	// put core-site.xml at / of classpath
 	// use "hdfs://dev80.hadoop:9000/user/cat" as example. Notes: host name can't

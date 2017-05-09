@@ -5,7 +5,7 @@
 2.  创建CAT库表
    新建cat数据库并执行源码/source/cat/script/Cat.sql脚本完成表结构的创建。
 3.  配置文件：
-拷贝client.xml、server.xml、datasources.xml文件到/data/appdatas/cat/目录中
+拷贝client.xml、server.xml、datasources.xml文件到/data/appdatas/maoyanmonitor/目录中
    Cat服务端配置
    A、   客户端配置
    打开/data/appdatas/maoyanmonitor/client.xml客户端配置文件
@@ -26,7 +26,7 @@
   * port : 配置服务端（cat-home）对外TCP协议开启端口，固定值为2280;
   * http-port : 配置服务端（cat-home）对外HTTP协议开启端口, 如：tomcat默认是8080端口，若未指定，默认为8080端口;
    B、   数据库配置
-   打开/data/appdatas/cat/datasources.xml数据库配置文件
+   打开/data/appdatas/maoyanmonitor/datasources.xml数据库配置文件
    <?xml version="1.0" encoding="utf-8"?>
  
    <data-sources>
@@ -61,12 +61,12 @@
   * 生成配置文件时，输入的数据库连接信息已写入此文件，如不换数据库，不用做任何修改
   * 主要修改：url（数据库连接地址）、user（数据库用户名）、password（数据用户登录密码）
 C、   服务端服务配置
-   打开/data/appdatas/cat/server.xml服务端服务配置文件
+   打开/data/appdatas/maoyanmonitor/server.xml服务端服务配置文件
    <?xml version="1.0" encoding="utf-8"?>
    <!-- Configuration for development environment-->
    <config local-mode="false" hdfs-machine="false" job-machine="true" alert-machine="true">
      
-      <storage local-base-dir="/data/appdatas/cat/bucket/" max-hdfs-storage-time="15" local-report-storage-time="7" local-logivew-storage-time="7">
+      <storage local-base-dir="/data/appdatas/maoyanmonitor/bucket/" max-hdfs-storage-time="15" local-report-storage-time="7" local-logivew-storage-time="7">
       </storage>
      
       <console default-domain="Cat" show-cat-domain="true">
@@ -118,7 +118,7 @@ C、修改Ping告警配置
    或者在浏览器地址栏中直接输入http:/172.16.29.225:8999/cat/s/config?op=thirdPartyRuleConfigs，打开客户端路由配置界面
    删除默认url (http监控)配置
 7．部署其他监控集群
-   A. 拷贝运行正常的CAT机器/data/appdatas/cat/目录中client.xml、server.xml、datasources.xml三个配置文件到监控机相同目录中
+   A. 拷贝运行正常的CAT机器/data/appdatas/maoyanmonitor/目录中client.xml、server.xml、datasources.xml三个配置文件到监控机相同目录中
    B. 修改server.xml配置中的 job-machine 和 alert-machine属性，都设置为false，禁用生成报告和报警功能，只开启监听功能
    C. 拷贝cat.war到其他监控集群
    D. 启动应用服务器，开启cat服务，完成服务端的配置及启动
@@ -129,8 +129,8 @@ C、修改Ping告警配置
      在resources资源文件META-INF下新建app.properties，注意是src/main/resources/META-INF/文件夹。
      内容如：app.name=${appName}；appName表示项目名
 2.  配置客户端文件，拷贝client.xml文件
-   A、Linux\Mac 到/data/appdatas/cat下
-   B、Windows 到系统运行盘的根目录/data/appdatas/cat下
+   A、Linux\Mac 到/data/appdatas/maoyanmonitor下
+   B、Windows 到系统运行盘的根目录/data/appdatas/maoyanmonitor下
    打开/data/appdatas/maoyanmonitor/client.xml客户端配置文件
    <?xml version="1.0" encoding="utf-8"?>
     <config mode="client" xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="config.xsd">
@@ -152,7 +152,7 @@ C、修改Ping告警配置
   * http-port : 配置服务端（cat-home）对外HTTP协议开启端口, 如：tomcat默认是8080端口，若未指定，默认为8080端口;
 
 Cat监控机配置
-在/data/appdatas/cat下，配置client.xml
+在/data/appdatas/maoyanmonitor下，配置client.xml
 
 <?xml version="1.0" encoding="utf-8"?>
 

@@ -24,7 +24,7 @@ import java.util.regex.Pattern;
  */
 public class InstallMojo extends AbstractMojo {
 
-	private String m_path = "/data/appdatas/cat";
+	private String m_path = "/data/appdatas/maoyanmonitor";
 
 	private String m_logPath = "/data/applogs/cat";
 

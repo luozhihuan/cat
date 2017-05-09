@@ -1,15 +1,5 @@
 package com.dianping.cat.build;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.unidal.dal.jdbc.configuration.AbstractJdbcResourceConfigurator;
-import org.unidal.dal.jdbc.mapping.TableProvider;
-import org.unidal.initialization.DefaultModuleManager;
-import org.unidal.initialization.Module;
-import org.unidal.initialization.ModuleManager;
-import org.unidal.lookup.configuration.Component;
-
 import com.dianping.cat.CatHomeModule;
 import com.dianping.cat.app.AppCommandDataDao;
 import com.dianping.cat.app.AppConnectionDataDao;
@@ -92,6 +82,15 @@ import com.dianping.cat.service.ProjectService;
 import com.dianping.cat.system.page.router.config.RouterConfigHandler;
 import com.dianping.cat.system.page.router.config.RouterConfigManager;
 import com.dianping.cat.system.page.router.service.RouterConfigService;
+import org.unidal.dal.jdbc.configuration.AbstractJdbcResourceConfigurator;
+import org.unidal.dal.jdbc.mapping.TableProvider;
+import org.unidal.initialization.DefaultModuleManager;
+import org.unidal.initialization.Module;
+import org.unidal.initialization.ModuleManager;
+import org.unidal.lookup.configuration.Component;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ComponentsConfigurator extends AbstractJdbcResourceConfigurator {
 	public static void main(String[] args) {
@@ -165,7 +164,7 @@ public class ComponentsConfigurator extends AbstractJdbcResourceConfigurator {
 		all.add(C(TableProvider.class, "web-api-data", WebApiTableProvider.class));
 
 		// database
-		all.add(defineJdbcDataSourceConfigurationManagerComponent("/data/appdatas/cat/datasources.xml"));
+		all.add(defineJdbcDataSourceConfigurationManagerComponent("/data/appdatas/maoyanmonitor/datasources.xml"));
 		all.addAll(new CatDatabaseConfigurator().defineComponents());
 		all.addAll(new AppDatabaseConfigurator().defineComponents());
 

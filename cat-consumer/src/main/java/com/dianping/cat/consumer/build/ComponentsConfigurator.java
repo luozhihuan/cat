@@ -1,13 +1,5 @@
 package com.dianping.cat.consumer.build;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import org.unidal.dal.jdbc.configuration.AbstractJdbcResourceConfigurator;
-import org.unidal.initialization.Module;
-import org.unidal.lookup.configuration.Component;
-
 import com.dianping.cat.analysis.MessageAnalyzer;
 import com.dianping.cat.config.content.ContentFetcher;
 import com.dianping.cat.config.content.DefaultContentFetcher;
@@ -62,6 +54,13 @@ import com.dianping.cat.report.ReportManager;
 import com.dianping.cat.service.ProjectService;
 import com.dianping.cat.statistic.ServerStatisticManager;
 import com.dianping.cat.task.TaskManager;
+import org.unidal.dal.jdbc.configuration.AbstractJdbcResourceConfigurator;
+import org.unidal.initialization.Module;
+import org.unidal.lookup.configuration.Component;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class ComponentsConfigurator extends AbstractJdbcResourceConfigurator {
 	public static void main(String[] args) {
@@ -285,7 +284,7 @@ public class ComponentsConfigurator extends AbstractJdbcResourceConfigurator {
 		      ServerFilterConfigManager.class, StorageReportUpdater.class));
 
 		// database
-		all.add(defineJdbcDataSourceConfigurationManagerComponent("/data/appdatas/cat/datasources.xml"));
+		all.add(defineJdbcDataSourceConfigurationManagerComponent("/data/appdatas/maoyanmonitor/datasources.xml"));
 
 		return all;
 	}

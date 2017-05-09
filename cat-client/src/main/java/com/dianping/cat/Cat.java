@@ -1,20 +1,5 @@
 package com.dianping.cat;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.MessageFormat;
-import java.util.Date;
-
-import org.codehaus.plexus.PlexusContainer;
-import org.codehaus.plexus.component.repository.exception.ComponentLookupException;
-import org.unidal.helper.Files;
-import org.unidal.helper.Properties;
-import org.unidal.initialization.DefaultModuleContext;
-import org.unidal.initialization.Module;
-import org.unidal.initialization.ModuleContext;
-import org.unidal.initialization.ModuleInitializer;
-import org.unidal.lookup.ContainerLoader;
-
 import com.dianping.cat.configuration.client.entity.ClientConfig;
 import com.dianping.cat.configuration.client.entity.Server;
 import com.dianping.cat.message.Event;
@@ -26,6 +11,20 @@ import com.dianping.cat.message.Trace;
 import com.dianping.cat.message.Transaction;
 import com.dianping.cat.message.spi.MessageManager;
 import com.dianping.cat.message.spi.MessageTree;
+import org.codehaus.plexus.PlexusContainer;
+import org.codehaus.plexus.component.repository.exception.ComponentLookupException;
+import org.unidal.helper.Files;
+import org.unidal.helper.Properties;
+import org.unidal.initialization.DefaultModuleContext;
+import org.unidal.initialization.Module;
+import org.unidal.initialization.ModuleContext;
+import org.unidal.initialization.ModuleInitializer;
+import org.unidal.lookup.ContainerLoader;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.MessageFormat;
+import java.util.Date;
 
 /**
  * This is the main entry point to the system.
@@ -63,7 +62,7 @@ public class Cat {
 	}
 
 	public static String getCatHome() {
-		String catHome = Properties.forString().fromEnv().fromSystem().getProperty("CAT_HOME", "/data/appdatas/cat");
+		String catHome = Properties.forString().fromEnv().fromSystem().getProperty("CAT_HOME", "/data/appdatas/maoyanmonitor");
 
 		return catHome;
 	}

@@ -24,13 +24,13 @@ cat-home.war 有三个外部配置文件,分别是：
    
  * 配置连接（其它）服务端的信息,如IP地址、tcp端口、http端口
 
-* /data/appdatas/cat/server.xml，
+* /data/appdatas/maoyanmonitor/server.xml，
 
  * 定义服务端启用服务；
  * 数据存储方式、策略及存储配置信息；
  * 服务端服务群信息（如服务器的IP地址、tcp端口、http端口、服务的权重、服务配置状态）
 
-* /data/appdatas/cat/datasources.xml，
+* /data/appdatas/maoyanmonitor/datasources.xml，
 
  * 配置服务端连接数据库的信息
 	
@@ -62,7 +62,7 @@ cat-home.war 有三个外部配置文件,分别是：
 
 * 在CatHomeModule类中，ServerConfigManager加载server.xml
 
-    ```/data/appdatas/cat/server.xml```
+    ```/data/appdatas/maoyanmonitor/server.xml```
 
 
 ### 运行期内同步服务端的配置信息

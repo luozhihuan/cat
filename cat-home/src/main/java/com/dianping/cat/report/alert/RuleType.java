@@ -1,5 +1,10 @@
 package com.dianping.cat.report.alert;
 
+import com.dianping.cat.Cat;
+import org.unidal.tuple.Pair;
+
+import javax.tools.JavaCompiler;
+import javax.tools.ToolProvider;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -12,13 +17,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import javax.tools.JavaCompiler;
-import javax.tools.ToolProvider;
-
-import org.unidal.tuple.Pair;
-
-import com.dianping.cat.Cat;
 
 public enum RuleType {
 
@@ -448,7 +446,7 @@ public enum RuleType {
 	},
 
 	UserDefine {
-		private static final String USER_DEFINED_FOLDER = "/data/appdatas/cat/user_defined_class/";
+		private static final String USER_DEFINED_FOLDER = "/data/appdatas/maoyanmonitor/user_defined_class/";
 
 		private static final String USER_DEFINED_CLASS_NAME = "UserDefinedRule.java";
 

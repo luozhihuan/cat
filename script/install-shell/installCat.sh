@@ -4,7 +4,7 @@ chmod -R 777 /cat/
 cd  cat/
 mvn clean install -DskipTests
 
-mkdir -p /data/appdatas/cat
+mkdir -p /data/appdatas/maoyanmonitor
 mkdir -p /data/applogs/cat
 chmod -R 777 /data/
 

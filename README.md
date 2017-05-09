@@ -77,15 +77,15 @@ Quick Started
 #####2、配置CAT的环境
 	mvn cat:install
 Note：
-* Linux\Mac  需要对/data/appdatas/cat和/data/applogs/cat有读写权限
-* Windows    则是对系统运行盘下的/data/appdatas/cat和/data/applogs/cat有读写权限,如果cat服务运行在e盘的tomcat中，则需要对e:/data/appdatas/cat和e:/data/applogs/cat有读写权限
+* Linux\Mac  需要对/data/appdatas/maoyanmonitor和/data/applogs/cat有读写权限
+* Windows    则是对系统运行盘下的/data/appdatas/maoyanmonitor和/data/applogs/cat有读写权限,如果cat服务运行在e盘的tomcat中，则需要对e:/data/appdatas/maoyanmonitor和e:/data/applogs/cat有读写权限
 * 
         此步骤是配置一些cat启动需要的基本数据库配置
 
-#####3、(Optional)如果安装了hadoop集群，需到/data/appdatas/cat/server.xml中配置对应hadoop信息。将localmode设置为false，默认情况下，CAT在开发模式（localmode=true）下工作。
+#####3、(Optional)如果安装了hadoop集群，需到/data/appdatas/maoyanmonitor/server.xml中配置对应hadoop信息。将localmode设置为false，默认情况下，CAT在开发模式（localmode=true）下工作。
 
 #####4、启动的cat单机版本基本步骤
-* 检查下/data/appdatas/cat/ 下面需要的几个配置文件，配置文件在源码script 。
+* 检查下/data/appdatas/maoyanmonitor/ 下面需要的几个配置文件，配置文件在源码script 。
 * 在cat目录下执行 mvn install -DskipTests 。
 * cat-home打包出来的war包，重新命名为cat.war, 并放入tomcat的webapps 。
 * 启动tomcat

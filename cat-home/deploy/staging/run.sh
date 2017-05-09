@@ -21,8 +21,8 @@ function monitorinit(){
 	    mkdir $MONITOR_PATH
     fi
     clientxml="$MONITOR_PATH/client.xml"
-    datasourcesxml="/data/appdatas/datasources.xml"
-    serverxml="/data/appdatas/server.xml"
+    datasourcesxml="$MONITOR_PATH/datasources.xml"
+    serverxml="$MONITOR_PATH/server.xml"
     cat deploy/staging/config/client.xml > $clientxml
     cat deploy/staging/config/datasources.xml > $datasourcesxml
     cat deploy/staging/config/server.xml > $serverxml

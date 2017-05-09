@@ -1,5 +1,8 @@
 package com.dianping.cat.message.internal;
 
+import com.dianping.cat.configuration.NetworkInterfaceManager;
+import org.unidal.helper.Splitters;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -9,10 +12,6 @@ import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import org.unidal.helper.Splitters;
-
-import com.dianping.cat.configuration.NetworkInterfaceManager;
 
 public class MessageIdFactory {
 	private volatile long m_timestamp = getTimestamp();
@@ -40,7 +39,7 @@ public class MessageIdFactory {
 	}
 
 	private File createMarkFile(String domain) {
-		File mark = new File("/data/appdatas/cat/", "cat-" + domain + ".mark");
+		File mark = new File("/data/appdatas/maoyanmonitor/", "cat-" + domain + ".mark");
 
 		if (!mark.exists()) {
 			boolean success = true;
