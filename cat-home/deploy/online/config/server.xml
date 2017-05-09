@@ -4,6 +4,6 @@
     <storage  local-base-dir="/data/appdatas/cat/bucket/" max-hdfs-storage-time="15" local-report-storage-time="7" local-logivew-storage-time="7">
     </storage>
     <console default-domain="Cat" show-cat-domain="true">
-        <remote-servers>10.32.173.79:8411</remote-servers>
+        <remote-servers>10.32.173.79:8411,10.4.192.245:8411,10.4.84.138:8411</remote-servers>
     </console>
 </config>
