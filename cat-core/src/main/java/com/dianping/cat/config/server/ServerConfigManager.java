@@ -1,20 +1,5 @@
 package com.dianping.cat.config.server;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.regex.Pattern;
-
-import org.codehaus.plexus.logging.LogEnabled;
-import org.codehaus.plexus.logging.Logger;
-import org.unidal.helper.Files;
-import org.unidal.helper.Splitters;
-import org.unidal.lookup.util.StringUtils;
-import org.unidal.tuple.Pair;
-
 import com.dianping.cat.Constants;
 import com.dianping.cat.configuration.NetworkInterfaceManager;
 import com.dianping.cat.configuration.server.entity.ConsoleConfig;
@@ -25,6 +10,20 @@ import com.dianping.cat.configuration.server.entity.Property;
 import com.dianping.cat.configuration.server.entity.ServerConfig;
 import com.dianping.cat.configuration.server.entity.StorageConfig;
 import com.dianping.cat.configuration.server.transform.DefaultSaxParser;
+import org.codehaus.plexus.logging.LogEnabled;
+import org.codehaus.plexus.logging.Logger;
+import org.unidal.helper.Files;
+import org.unidal.helper.Splitters;
+import org.unidal.lookup.util.StringUtils;
+import org.unidal.tuple.Pair;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Pattern;
 
 public class ServerConfigManager implements LogEnabled {
 
@@ -59,7 +58,7 @@ public class ServerConfigManager implements LogEnabled {
 			for (String endpoint : endpoints) {
 				int pos = endpoint.indexOf(':');
 				String host = (pos > 0 ? endpoint.substring(0, pos) : endpoint);
-				int port = (pos > 0 ? Integer.parseInt(endpoint.substring(pos + 1)) : 2281);
+				int port = (pos > 0 ? Integer.parseInt(endpoint.substring(pos + 1)) : 8411);
 
 				pairs.add(new Pair<String, Integer>(host, port));
 			}

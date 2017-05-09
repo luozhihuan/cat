@@ -7,16 +7,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-import java.util.regex.*;
 import java.util.Calendar;
-import java.net.*; 
+import java.util.Locale;
 
 
 public class PuppetMonitor {
@@ -68,7 +63,7 @@ public class PuppetMonitor {
 		pars[7]="op="+alertation.getOp();
 		pars[8]="date="+alertation.getDate();
 		pars[9]="hostname="+alertation.getHostname();
-		String url="http://10.128.120.12:2281/cat/r/alteration";
+		String url="http://10.128.120.12:8411/cat/r/alteration";
 		HttpPostUtils httppost=new HttpPostUtils();
 		httppost.setUrlAddress(url);
 		System.out.println(httppost.httpPost(pars));

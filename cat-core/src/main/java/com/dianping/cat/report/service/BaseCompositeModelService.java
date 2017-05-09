@@ -1,23 +1,22 @@
 package com.dianping.cat.report.service;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Semaphore;
-import java.util.concurrent.TimeUnit;
-
+import com.dianping.cat.Cat;
+import com.dianping.cat.config.server.ServerConfigManager;
+import com.dianping.cat.message.Event;
+import com.dianping.cat.message.Message;
+import com.dianping.cat.message.Transaction;
 import org.codehaus.plexus.personality.plexus.lifecycle.phase.Initializable;
 import org.codehaus.plexus.personality.plexus.lifecycle.phase.InitializationException;
 import org.unidal.helper.Splitters;
 import org.unidal.helper.Threads;
 import org.unidal.lookup.annotation.Inject;
 
-import com.dianping.cat.Cat;
-import com.dianping.cat.config.server.ServerConfigManager;
-import com.dianping.cat.message.Event;
-import com.dianping.cat.message.Message;
-import com.dianping.cat.message.Transaction;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
 
 public abstract class BaseCompositeModelService<T> extends ModelServiceWithCalSupport implements ModelService<T>,
       Initializable {
@@ -55,7 +54,7 @@ public abstract class BaseCompositeModelService<T> extends ModelServiceWithCalSu
 		for (String endpoint : endpoints) {
 			int pos = endpoint.indexOf(':');
 			String host = (pos > 0 ? endpoint.substring(0, pos) : endpoint);
-			int port = (pos > 0 ? Integer.parseInt(endpoint.substring(pos + 1)) : 2281);
+			int port = (pos > 0 ? Integer.parseInt(endpoint.substring(pos + 1)) : 8411);
 			BaseRemoteModelService<T> remote = createRemoteService();
 
 			remote.setHost(host);

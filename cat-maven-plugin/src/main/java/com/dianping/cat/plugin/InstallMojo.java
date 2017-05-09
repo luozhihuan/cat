@@ -1,5 +1,13 @@
 package com.dianping.cat.plugin;
 
+import org.apache.maven.plugin.AbstractMojo;
+import org.apache.maven.plugin.MojoExecutionException;
+import org.apache.maven.plugin.MojoFailureException;
+import org.unidal.helper.Files;
+import org.unidal.helper.Files.AutoClose;
+import org.unidal.maven.plugin.common.PropertyProviders;
+import org.unidal.maven.plugin.common.PropertyProviders.IValidator;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -9,14 +17,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.regex.Pattern;
-
-import org.apache.maven.plugin.AbstractMojo;
-import org.apache.maven.plugin.MojoExecutionException;
-import org.apache.maven.plugin.MojoFailureException;
-import org.unidal.helper.Files;
-import org.unidal.helper.Files.AutoClose;
-import org.unidal.maven.plugin.common.PropertyProviders;
-import org.unidal.maven.plugin.common.PropertyProviders.IValidator;
 
 /**
  * @goal install
@@ -108,7 +108,7 @@ public class InstallMojo extends AbstractMojo {
 			getLog().info("Preparing Cat environment ... DONE");
 			getLog().info("Use following command line to start local Cat server:");
 			getLog().info("   cd cat-home; mvn jetty:run");
-			getLog().info("Please open http://localhost:2281/cat in your browser");
+			getLog().info("Please open http://localhost:8411/cat in your browser");
 		}
 	}
 

@@ -8,7 +8,7 @@
 	</storage>
 	
 	<console default-domain="Cat" show-cat-domain="true">
-		<remote-servers>127.0.0.1:2281</remote-servers>		
+		<remote-servers>127.0.0.1:8411</remote-servers>
 	</console>
 		
 </config>
@@ -32,7 +32,7 @@
 	</storage>
 
 	<console default-domain="Cat" show-cat-domain="true">
-		<remote-servers>192.168.0.1:2281,192.168.0.2:2281</remote-servers>		
+		<remote-servers>192.168.0.1:8411,192.168.0.2:8411</remote-servers>
 	</console>
 	
 	<ldap ldapUrl="ldap://192.168.50.11:389/DC=dianpingoa,DC=com"/>
