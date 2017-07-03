@@ -1,0 +1,24 @@
+version: v1
+common:
+  os: centos7                                   # 如无特殊情况，请使用centos7，不填会默认centos7.
+  tools:
+    oracle-jdk: 7                               # build 使用的 jdk 版本
+build:
+  tools:
+    maven: 3.3.3
+  run:
+    workDir: ./                                 # workDir是代码仓库的相对目录
+    cmd:
+      - sh cat-home/deploy/qatest/compile.sh   # cd 进 workDir 后,调用哪个脚本进行打包
+  target:
+    distDir: ./cat-home/target/    # distDir是代码仓库的相对目录
+    files:                                      # files中的文件描述是相对distDir的
+      - ./*.war
+      - ../deploy
+autodeploy:
+    targetDir: /opt/meituan/mobile/movie-monitor/  # build 成功后会把 build.target 目录下的文件拷贝到该目录下
+    env:
+    run: sh deploy/qatest/run.sh                       # run 和 check 的路径都是相对 targetDir
+    check: sh deploy/qatest/check.sh
+    checkRetry: 3                               # 缺省值为1，可加大增加check命令执行次数，拉长检查时间，check.sh中为30s，这样check的时间就为60s
+    CheckInterval: 1s                           # 两次 check 的时间间隔, 缺省值为1s，建议此数值不宜过大。

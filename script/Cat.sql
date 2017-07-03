@@ -36,6 +36,7 @@ CREATE TABLE `weeklyreport` (
   UNIQUE KEY `period` (`period`,`domain`,`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='周报表';
 
+
 CREATE TABLE `monthreport` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL COMMENT '报表名称, transaction, problem...',

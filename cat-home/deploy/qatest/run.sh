@@ -23,7 +23,7 @@ function monitorinit(){
     clientxml="$MONITOR_PATH/client.xml"
     datasourcesxml="$MONITOR_PATH/datasources.xml"
     serverxml="$MONITOR_PATH/server.xml"
-    cat deploy/online/config/client.xml > $clientxml
+    cat deploy/qatest/config/client.xml > $clientxml
 }
 
 function init() {
