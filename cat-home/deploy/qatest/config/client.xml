@@ -1,5 +1,5 @@
-<config>
+<config mode="client">
     <servers>
-        <server ip="10.32.173.79" port="2280" />
+        <server ip="10.4.226.187" port="2280" http-port="8080"/>
     </servers>
 </config>
