@@ -1,0 +1,5 @@
+<config>
+    <servers>
+        <server ip="10.32.173.79" port="2280" />
+    </servers>
+</config>

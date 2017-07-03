@@ -4,6 +4,7 @@
 /*/target/*
 /*/bin/*
 /*/.*
+/cat-home/logs
 .*
 /*.bat
 !.travis.yml
